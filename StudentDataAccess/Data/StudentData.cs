@@ -24,6 +24,7 @@ namespace DataAccess.Data
       var results = await _db.LoadData<Students, dynamic>(
         storedProcedure: "dbo.spStudent_Get",
         new { StudentId = id });
+      Console.WriteLine("Succes!");
       return results.FirstOrDefault();
     }
 
